@@ -17,13 +17,17 @@ jobs:
         with:
           node-version: 18
           registry-url: 'https://npm.pkg.github.com'
+          scope: '@sebastian-brud-tectonic'
       - run: | 
           npm install
           cd packages/widget
           npm install
+      - run: |
+          cd packages/widget
           npm run front:build
           cp src/lib/package.json dist/
-          cd dist
+      - run: |
+          cd packages/widget/dist
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
