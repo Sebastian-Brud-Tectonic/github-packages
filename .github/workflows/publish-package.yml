@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 18
       - run: | 
-          npm ci
+          npm install
           cd packages/widget
           npm run build
           cp src/lib/package.json dist/
