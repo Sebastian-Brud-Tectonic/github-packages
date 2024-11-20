@@ -1,0 +1,22 @@
+name: "Publish packages"
+
+on:
+  push:
+    tags: 
+      - "v1.*-rc*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4
+      - uses: actions/setup-node@4
+        with:
+          node-version: 18
+      - run: | 
+          npm ci
+          cd packages/widget
+          npm run build
+          cp src/lib/package.json dist/
+          cd dist
+          npm publish --dry-run

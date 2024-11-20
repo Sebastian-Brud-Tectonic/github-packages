@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: resolve(import.meta.dirname, './src/lib.tsx'),
+      entry: resolve(import.meta.dirname, './src/lib/lib.tsx'),
       fileName: 'app',
       formats: ['es']
     },
