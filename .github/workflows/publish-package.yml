@@ -16,7 +16,7 @@ jobs:
       - run: | 
           npm install
           cd packages/widget
-          npm run build
+          npm run front:build
           cp src/lib/package.json dist/
           cd dist
           npm publish --dry-run
