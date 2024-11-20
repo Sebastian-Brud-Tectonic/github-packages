@@ -1,0 +1,25 @@
+{
+  "name": "github-pkgs-test",
+  "version": "1.0.0",
+  "description": "Github packages testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git://github.com:Sebastian-Brud-Tectonic/github-packages"
+  },
+  "keywords": [
+    "packages",
+    "github"
+  ],
+  "private": true,
+  "author": "Sebastian Brud",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.1.9",
+    "vite": "^5.4.10"
+  }
+}
