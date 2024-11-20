@@ -1,5 +1,5 @@
 {
-  "name": "@github-pkgs-test/widget",
+  "name": "@sebastian-brud-tectonic/github-pkgs-test-widget",
   "version": "1.0.0",
   "type": "module",
   "main": "./app.js",
